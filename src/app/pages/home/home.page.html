@@ -1,0 +1,16 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar id="header">
+      <ion-title>HTTPCats</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>What HTTPCat do you want to know today?</strong>
+    <ion-searchbar animated placeholder="Type a HTTP status code" [(ngModel)]="searchValue" id="search"></ion-searchbar>
+  
+    <app-cat-card [HTTPStatusCode]="searchValue" *ngIf="searchValue"></app-cat-card>
+  
+  </div>
+
+</ion-content>
